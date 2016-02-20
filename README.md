@@ -1,28 +1,26 @@
-== README
+# SAVR
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+> Project to create a web application for users to discover new songs by your taste in music within SAVR.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## BackStory
+
+The idea behind SAVR is for the user to find new music within the SAVR community. The user will request a song in a post and other users will be able to reply to that post by commenting a link or embedded music file that relates to that specific song. Other users will be able to thumbs up or thumbs down that song so that the original poster can get an idea if that related song is worth listening to. If the song matches what the original poster wanted then brownie points for the SAVR community. SAVR wants to become a social network for music lovers all around the world, or at least within THE OCHO.
+
+
+## Future Features
+- 
+
+## Technologies
+- Ruby
+- Ruby On Rails
+- HTML
+- CSS
+- JavaScript
+
+
+## Thank You!
+
+> User Story [https://trello.com/b/LDRsddwA/savr] (https://trello.com/b/LDRsddwA/savr)
+> 
+> GitHub [https://github.com/mrpascual/savr](https://github.com/mrpascual/savr)
