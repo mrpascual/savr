@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
-  root "users#new"
+  root "users#index"
   resources :users, only: [:new, :create]
 
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
+
+  get "posts/" => "posts#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
