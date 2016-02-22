@@ -1,11 +1,11 @@
 # SAVR
 
-> Project to create a web application for users to discover new songs by your taste in music within SAVR.
+> Project to create a web application for users to discover new music.
 
 
-## BackStory
+## Back Story
 
-The idea behind SAVR is for the user to find new music within the SAVR community. The user will request a song in a post and other users will be able to reply to that post by commenting a link or embedded music file that relates to that specific song. Other users will be able to thumbs up or thumbs down that song so that the original poster can get an idea if that related song is worth listening to. If the song matches what the original poster wanted then brownie points for the SAVR community. SAVR wants to become a social network for music lovers all around the world, or at least within THE OCHO.
+The idea behind SAVR is for the user to find new music based off of recommendations from other people. The user can post a song on the site and other users will be able to reply back with a related song they believe that user would enjoy. Users will be introduced to songs and artists from people with similar tastes that understand what that person is looking for. This can also reduce the length of time it takes if you were to test out a library of songs generated from algorithms of digital music services like Pandora and Spotify. SAVR wants to become a social network that builds trust within its community and to provide them with the best way of discovering new music.
 
 
 ## Future Features
