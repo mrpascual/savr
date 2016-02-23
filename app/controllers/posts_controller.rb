@@ -13,10 +13,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = Post.new(params.require(:post).permit(:body))
 
     if @post.save
-      redirect to :posts
+      redirect_to posts_path
     else
       render :new
     end
@@ -29,8 +29,8 @@ class PostsController < ApplicationController
  def update
    @post = Post.find(params[:id])
 
-   if @post.update_attributes(post_params)
-     redirect_to :posts
+   if @post.update_attributes(params.require(:tweet).permit(:body))
+     redirect_to posts_path
    else
      render :edit
    end
