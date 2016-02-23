@@ -6,13 +6,15 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
 
-  get "posts/" => "posts#index"
-  get "posts/new" => "posts#new", as: :new_post
-  post "posts/" => "posts#create"
-  get "posts/:id" => "posts#show", as: :post
-  get "posts/:id/edit" => "posts#edit", as: :edit_post
-  patch "posts/:id" => "posts#update"
-  delete "posts/:id" => "posts#destroy"
+  # get "posts/" => "posts#index"
+  # get "posts/new" => "posts#new", as: :new_post
+  # post "posts/" => "posts#create"
+  # get "posts/:id" => "posts#show", as: :post
+  # get "posts/:id/edit" => "posts#edit", as: :edit_post
+  # patch "posts/:id" => "posts#update"
+  # delete "posts/:id" => "posts#destroy"
+  resources :posts do
+  resources :comments
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -68,4 +70,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+end
 end
