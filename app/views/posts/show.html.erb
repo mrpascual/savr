@@ -7,7 +7,7 @@
 <p>Created: <%= @post.created_at.strftime("%m/%d/%y") %> by <%= @post.user %>
 </p>
 
-<h2>Comments</h2>
+<h3>Comments</h3>
 <% @post.comments.each do |comment| %>
   <p>
     <b>Author:</b>
@@ -20,7 +20,7 @@
   </p>
 <% end %>
 
-<h5>Add comment</h5>
+<h8>Add comment below</h8>
 <%= form_for([@post, @post.comments.build]) do |f| %>
   <div class="field">
 
