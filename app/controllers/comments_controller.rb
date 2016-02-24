@@ -14,8 +14,16 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-    @comment = @post.comments.create!(params.require(:comment).permit!)
-    redirect_to post_path(@post)
+    @comment = Comment.new(comment_params)
+    @comment.user_id = current_user.id
+    @comment.post_id = @post.id
+
+    if @comment.save
+      redirect_to post_path(@post)
+    else
+      flash.now.alert = "Dang dude. Didn't work"
+      render :new
+    end
   end
     # @comment = Comment.new(params.require(:comment).permit(:body))
 
@@ -24,6 +32,10 @@ class CommentsController < ApplicationController
     # else
     #   render :new
     # end
+  private
+    def comment_params
+      params.require(:comment).permit(:title, :body, :user_id, :post_id)
+    end
   end
 
 

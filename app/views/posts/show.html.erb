@@ -1,12 +1,17 @@
 
 
-<p><%= @post.title %> <%= @post.author %> <%= @post.body %></p>
+<p><%= @post.title %> <%= @post.user %> <%= @post.body %></p>
+
+
+
+<p>Created: <%= @post.created_at.strftime("%m/%d/%y") %> by <%= @post.user %>
+</p>
 
 <h2>Comments</h2>
 <% @post.comments.each do |comment| %>
   <p>
     <b>Author:</b>
-    <%= comment.author %>
+    <%= comment.user.username %>
   </p>
 
   <p>
@@ -15,11 +20,11 @@
   </p>
 <% end %>
 
-<h2>Add comment</h2>
+<h5>Add comment</h5>
 <%= form_for([@post, @post.comments.build]) do |f| %>
   <div class="field">
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
+
+    <%= f.text_field :body %>
   </div>
   <div class="actions">
     <%= f.submit %>

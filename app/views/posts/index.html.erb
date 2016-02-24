@@ -3,8 +3,15 @@
 <ul>
     <% @posts.each do |post| %>
         <li>
-            <strong><%= post.title %></strong> - <%= post.author %> - <%= post.body %>
+            <strong><%= post.title %></strong> - <%= post.user.username %> - <%= post.body %>
             <%= link_to "More info", post_path(post) %>
         </li>
     <% end %>
 </ul>
+
+
+<% if @posts.present? %>
+   <% @posts.each do |post| %>
+      <%= post.title %>
+   <% end %>
+<% end %>
