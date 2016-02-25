@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.all.order('created_at DESC')
   end
 
   def show
@@ -47,4 +47,11 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :body, :user_id)
     end
+
+
+  def comment_params
+    params.require(:comment).permit(:title, :body, :user_id, :post_id)
+  end
+
+
 end

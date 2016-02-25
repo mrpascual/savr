@@ -1,23 +1,27 @@
-
-
-<p><%= @post.title %> <%= @post.user %> <%= @post.body %></p>
-
-
-
-<p>Created: <%= @post.created_at.strftime("%m/%d/%y") %> by <%= @post.user %>
+<p>Created: <%= @post.created_at.strftime("%m/%d/%y") %> by <%= @post.user.username %>
 </p>
 
-<h3>Comments</h3>
+<h4><%= @post.title %></h4>
+<p><%= @post.body %></p>
+
+<h5>Comments</h5>
 <% @post.comments.each do |comment| %>
   <p>
     <b>Author:</b>
     <%= comment.user.username %>
   </p>
 
+  <p><b>Created: <%= @post.created_at.strftime("%m/%d/%y") %></b></p>
+
   <p>
     <b>Comment:</b>
     <%= comment.body %>
+
+    <%= link_to post_comment_path(@post, comment), method: :delete, data: { confirm: "Delete comment?"}  do %>
+      <i class="material-icons clear-icon">clear</i>
+    <% end %>
   </p>
+
 <% end %>
 
 <h8>Add comment below</h8>

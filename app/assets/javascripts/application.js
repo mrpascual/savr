@@ -11,19 +11,19 @@
 // about supported directives.
 //
 //= require jquery
-//= require materialize-sprockets
 //= require jquery_ujs
+//= require materialize-sprockets
 //= require_tree .
 
 
-$( document ).ready(function) block
+$( document ).ready(function() {
+  // $(".dropdown-button").dropdown();
 
-$(".dropdown-button").dropdown();
-
-$(document).on('click','.navbar-collapse.in',function(e) {
-
-    if( $(e.target).is('a') && ( $(e.target).attr('class') != 'dropdown-toggle' ) ) {
-        $(this).collapse('hide');
-    }
-
+  $(document).on('click','.navbar-collapse.in',function(e) {
+      if( $(e.target).is('a') && ( $(e.target).attr('class') != 'dropdown-toggle' ) ) {
+          $(this).collapse('hide');
+      }
+  });
 });
+
+
