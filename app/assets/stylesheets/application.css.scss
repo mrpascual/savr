@@ -63,3 +63,7 @@ h1
     font-size: 20px;
   }
 }
+
+.nav-wrapper {
+  @extend .cyan-text, .text-lighten-5;
+}

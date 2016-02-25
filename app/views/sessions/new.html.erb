@@ -1,6 +1,9 @@
-<h1>Sign in</h1>
-<p id="alert"><%= alert %></p>
-<%= form_tag sessions_path do %>
+<body>
+  <div class="container">
+
+  <h1>Sign in</h1>
+  <p id="alert"><%= alert %></p>
+  <%= form_tag sessions_path do %>
 
   <div class="field">
     <%= label_tag :email %>
@@ -12,4 +15,6 @@
     <%= password_field_tag :password %>
   </div>
   <div class="actions"><%= submit_tag "Log in" %></div>
-<% end %>
+  <% end %>
+ </div>
+</body>

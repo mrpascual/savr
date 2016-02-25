@@ -19,6 +19,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = current_user
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(params.require(:user).permit(:body))
+      redirect_to current_user
+    else
+      render :edit
+    end
+end
 
   private
     def user_params
