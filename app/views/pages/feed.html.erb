@@ -1,0 +1,19 @@
+YOU FIND OTHER PEOPLE'S STUFF AND SEARCH HERE!
+
+<h1>OPP</h1>
+
+<div class="post-wrapper">
+  <ul class="collapsible" data-collapsible="accordion">
+  <% @posts.each do |post|%>
+   <li>
+     <div class="collapsible-header"><i class="material-icons">filter_drama</i><%= post.title %> | <%= post.user.username %>
+     </div>
+     <div class="collapsible-body"><p><%= post.body %></p>
+     <%= link_to "View comments", post_path(post) %>
+     </div>
+    <% end %>
+   </li>
+  </ul>
+ </div>
+
+<%= link_to "Add new post", new_post_path %>

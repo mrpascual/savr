@@ -49,3 +49,17 @@ h1
   position:    relative;
   bottom:      -2px;
 }
+
+@media (min-width: 600px) {
+  .buffer.left {
+    margin-left: 50px;
+  }
+
+  .buffer.right {
+    margin-right: 50px;
+  }
+
+  .buffer > li > a {
+    font-size: 20px;
+  }
+}
