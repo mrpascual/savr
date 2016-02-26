@@ -34,8 +34,8 @@
       <ul id="nav-mobile" class="left buffer">
         <li class="<%= "active" if params[:action] == "feed" %>"><%= link_to 'FEED', feed_path %></li>
       </ul>
-      <a href="#" class="brand-logo center">
-        <%= "Search and Find" if params[:action] == "feed" %>
+      <a href="#"><img src="../../wave_formm.svg" class="brand-logo center">
+        <%= "Search and Discover" if params[:action] == "feed" %>
         <%= current_user.username + "'s Collection" if params[:action] == "home" %>
       </a>
       <ul id="nav-mobile" class="right buffer">

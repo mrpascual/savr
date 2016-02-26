@@ -10,6 +10,7 @@
   <h5>Comments</h5>
     <% @post.comments.each do |comment| %>
   <p>
+<div class = "cmmnt">
     <b>Author:</b>
     <%= comment.user.username %>
   </p>
@@ -24,7 +25,9 @@
       <i class="material-icons clear-icon">clear</i>
     <% end %>
   </p>
+</div>
 <% end %>
+
 
 <h8>Add comment below</h8>
   <%= form_for([@post, @post.comments.build]) do |f| %>
