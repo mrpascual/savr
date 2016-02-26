@@ -1,4 +1,5 @@
 ![Spotlight screenshot](https://i.imgur.com/O6OTr2u.png)
+![Spotlight screenshot](https://i.imgur.com/NRnKqsH.png)
 
 > A web application for users to find and share music with one another
 
@@ -32,3 +33,5 @@ Users will be able to:
 > User Story [https://trello.com/b/LDRsddwA/savr] (https://trello.com/b/LDRsddwA/savr)
 > 
 > GitHub [https://github.com/mrpascual/savr](https://github.com/mrpascual/savr)
+>
+> Website [https://thawing-fortress-61262.herokuapp.com/] (https://thawing-fortress-61262.herokuapp.com/)
