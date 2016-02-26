@@ -14,7 +14,7 @@
 <header>
   <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#!"><img src="wavs_logo_navbar_main_resize.svg" class="brand-logo"></a>
       <ul class="right hide-on-med-and-down">
         <li>
           <% if current_user %>
@@ -36,7 +36,7 @@
       </ul>
       <a href="#" class="brand-logo center">
         <%= "Search and Find" if params[:action] == "feed" %>
-        <%= current_user.username + "'s Stuff" if params[:action] == "home" %>
+        <%= current_user.username + "'s Collection" if params[:action] == "home" %>
       </a>
       <ul id="nav-mobile" class="right buffer">
         <li class="<%= "active" if params[:action] == "home" %>"><%= link_to 'HOME', home_path %></li>

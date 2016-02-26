@@ -38,9 +38,10 @@
   </div>
 <% end %>
 
+<% if current_user == @post.user %>
 <%= link_to "Edit", edit_post_path(@post) %>
 <%= link_to "Remove", post_path, method: :delete, data: { confirm: "Delete post?"} %>
+<% end %>
 <%= link_to "Posts", posts_path %>
-
 </div>
 </body>
