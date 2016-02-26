@@ -15,7 +15,6 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
-
     if @post.save
       redirect_to posts_path
     else
@@ -29,7 +28,6 @@ class PostsController < ApplicationController
 
  def update
    @post = Post.find(params[:id])
-
    if @post.update_attributes(params.require(:post).permit(:body))
      redirect_to posts_path
    else
@@ -48,10 +46,7 @@ class PostsController < ApplicationController
       params.require(:post).permit(:title, :body, :user_id)
     end
 
-
   def comment_params
     params.require(:comment).permit(:title, :body, :user_id, :post_id)
   end
-
-
 end

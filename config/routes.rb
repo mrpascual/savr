@@ -12,4 +12,5 @@ Rails.application.routes.draw do
 
   get "/feed" => "pages#feed"
   get "/home" => "pages#home"
+  get "/about" => "pages#about"
 end

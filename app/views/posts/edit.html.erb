@@ -1,22 +1,21 @@
 <body>
   <div class="container">
 
-<h1>Edit post</h1>
+  <h1>Edit post</h1>
 
-<%= form_for @post do |f| %>
+  <%= form_for @post do |f| %>
 
-    <div>
-        <%= f.label :title %>
-        <%= f.text_field :title %>
-    </div>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
 
-    <div>
-        <%= f.label :body %>
-        <%= f.text_field :body %>
-    </div>
+  <div>
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+  </div>
 
-    <%= f.submit "Save changes" %>
-
+  <%= f.submit "Save changes" %>
 <% end %>
 
 <%= link_to "Posts", posts_path %>
